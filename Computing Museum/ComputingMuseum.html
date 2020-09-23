@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Bob Doran Museum of Computing</title>
+    <!--Link icon, and external css and javascript files with html-->
+    <link rel="icon" href="http://redsox.uoa.auckland.ac.nz/ms/logo-192x192.png">
+    <link rel="stylesheet" href="ComputingMuseum.css">
+    <script src="ComputingMuseum.js"></script>
+</head>
+
+<body>
+    <!--Header part is used for showing the museum logo-->
+    <header>
+        <p id="header"><img id="logo" src="http://redsox.uoa.auckland.ac.nz/ms/logo.svg" alt="Museum Logo"></p>
+        <div id="inoff">
+            <button id="signin" onclick="showLogin()">login</button>
+        </div>
+    </header>
+    <!--Create navigation bar using unordered list and links-->
+    <nav>
+        <!-- https://www.w3schools.com/css/css_navbar.asp -->
+        <ul id="navbar">
+            <li><a id="home" onclick="showHome()" href="#">HOME</a></li>
+            <li><a id="news" onclick="showNews()" href="#">NEWS</a></li>
+            <li><a id="display" onclick="showDisplay()" href="#">DISPLAY</a></li>
+			<li><a id="shop" onclick="showShop()" href="#">SHOP</a></li>
+			<li><a id="register" onclick="showRegister()" href="#">SIGNUP</a></li>
+            <li><a id="guestbook" onclick="showGuestBook()" href="#">GUEST BOOK</a></li>
+        </ul>
+    </nav>
+    <!--Home section-->
+    <div id="SectionHome">
+        <section>
+            <h1>
+                The Bob Doran Museum of Computing
+            </h1>
+            <hr class="headingLine">
+            <p class="fontSize">
+                Welcome to The Bob Doran Museum of Computing. You can learn more about the displays here. 
+                If you are intrigued by what you find here and live close to Auckland, or are visiting the city, 
+                please feel free to drop in to the school and see the displays for yourself. We are located 
+                at the University on Princes Street and are always open during normal office hours and also 
+                in the evenings and on the weekends when classes are in session.
+            </p>
+            <p id="homeImage"><img src="https://upload.wikimedia.org/wikipedia/commons/7/77/University_of_Auckland_Clock_Tower_building_from_front.JPG"></p><hr><br>
+        </section>
+    </div>
+    <!--News section-->
+    <div id="SectionNews">
+        <section>
+            <div>
+                <h1>News</h1>
+                <hr class='headingLine'>
+            </div>
+            <!--Update news following using javascript-->
+            <div id="newsContent"></div>
+        </section>
+    </div>
+	<!--Display section-->
+    <div id="SectionDisplay">
+        <section>
+            <div>
+                <h1>Display</h1>
+                <hr class='headingLine'><br>
+                <input id='search' type='search' placeholder='search' oninput='searchItem()'>
+                <br><br><br>
+            </div>
+            <!--Update items following using javascript-->
+            <div id="displayContent"></div>
+        </section>
+    </div>
+	<!--Shop section-->
+    <div id="SectionShop">
+        <section>
+            <div>
+                <h1>Museum Shop</h1>
+                <hr class='headingLine'><br>
+                <input id='searchGift' type='search' placeholder='search' oninput='searchGift()'>
+                <br><br><br>
+            </div>
+            <!--Update items following using javascript-->
+            <div id="shopContent"></div>
+        </section>
+    </div>
+	<!--Registration section-->
+    <div id="SectionRegistration">
+        <section>
+            <div>
+                <h1>Join Us!</h1>
+                <hr class="headingLine">
+			</div>
+			<!-- https://www.w3schools.com/howto/howto_css_register_form.asp -->
+			<div id="registerForm">
+				<br><br>
+				<label for="name">User Name</label><br>
+				<input id="userName" type="text" placeholder="Enter your user name" name="name" required><br><br>
+				<label for="psw">Password</label><br>
+				<input id="userPSW" type="password" placeholder="Enter your password" name="psw" required><br><br>
+				<label for="address">Address</label><br>
+				<input id="userAddress" type="text" placeholder="Enter your address" name="address"><br><br><br>
+                <button type="submit" id="registerButton" onclick="registration()">Sign Up</button><br>
+                <div id="registerStatus">
+                    <p class="fontSize">Please register here</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--Login section-->
+    <div id="SectionLogin">
+        <section>
+            <div>
+                <h1>Please Login</h1>
+                <hr class="headingLine">
+			</div>
+			<!-- https://www.w3schools.com/howto/howto_css_register_form.asp -->
+			<div id="loginForm">
+				<br><br>
+				<label for="name">User Name</label><br>
+				<input id="loginName" type="text" placeholder="Enter your user name" name="name" required><br><br>
+				<label for="psw">Password</label><br>
+				<input id="loginPSW" type="password" placeholder="Enter your password" name="psw" required><br><br>
+                <button type="submit" id="loginButton" onclick="login()">Login</button><br><br>
+                <div id="loginStatus">
+                    <p class="fontSize">Please login to continue</p>
+                </div>
+            </div>
+        </section>
+    </div>
+    <!--Guest Book section-->
+    <div id="SectionGuestBook">
+        <section>
+            <div>
+                <h1>Guest Book</h1>
+                <hr class="headingLine">
+                <p class="fontSize">Please sign our guest book. Your comments are greatly appreciated</p>
+                <textarea id="comments" cols="45" rows="10" placeholder="Enter your comments here..."></textarea><br>
+                <input id="name" type="text" placeholder="Your name">
+                <input id="submit" type="submit" value="Submit" onclick="postComments()"><br><br>
+				<h2>Recent Entries</h2>
+            </div>
+			<p id="allcomments"></p>
+        </section>
+    </div>
+    <!--Footer part is used for showing version information-->
+    <footer id="version">
+    </footer>
+</body>
+
+</html>

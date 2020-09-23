@@ -1,0 +1,153 @@
+
+body {
+	margin: 0;
+}
+
+#header {
+    background-color: #006699;
+    text-align: center;
+    margin: 0px;
+    margin-bottom: 1px;
+}
+
+#signin {
+    background-color: #006699;
+    float: right;
+    margin: 0px;
+    width: 5%;
+    font-size: 15px;
+    color: white;
+}
+
+#logo {
+    height: 100px;
+    width: 100px;
+	/* https://stackoverflow.com/questions/24933430/img-src-svg-changing-the-fill-color */
+    filter: invert(1) sepia(1) saturate(5) hue-rotate(175deg);
+}
+
+/* https://www.w3schools.com/css/css_navbar.asp */
+#navbar {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #006699;
+}
+
+li {
+    float: left;
+    width: 16%;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #0080a7;
+}
+
+section {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+h1 {
+    font-size: 40px;
+    color: #006699;
+    text-align: center;
+}
+
+.headingLine {
+    height: 2px;
+    background-color: #006699;
+}
+
+/* https://www.w3schools.com/css/css_float.asp */
+#date, #buy {
+    float: right;
+    width: 50%;
+}
+
+.fontSize {
+    font-size: 20px;
+}
+
+#homeImage {
+    text-align: center;
+}
+
+img {
+    width: 300px;
+}
+
+#search, #searchGift {
+    border-color: #006699;
+    width: 300px;
+}
+
+button {
+	background-color: #006699;
+	color: white;
+}
+
+/* https://www.w3schools.com/html/html_links.asp */
+button a {
+	color: white;
+	background-color: transparent;
+	text-decoration: none;
+}
+
+
+label {
+    color: #006699;
+}
+
+input {
+    background-color: white;
+    border-color: #006699;
+    width: 20%;
+}
+
+#registerForm, #loginForm {
+    text-align: center;
+}
+
+#registerButton, #loginButton{
+	background-color: #006699;
+	color: white;
+	font-size: 15px;
+}
+
+#registerStatus, #loginStatus {
+    color: #006699;
+}
+
+#comments {
+    border-color: #006699;
+}
+#name {
+    border-color: #006699;
+    width: 15%;
+}
+#submit {
+    background-color: #006699;
+    color: white;
+    width: 5%;
+}
+
+h2 {
+    font-size: 30px;
+    color: #006699;
+}
+
+#version {
+    text-align: center;
+}
